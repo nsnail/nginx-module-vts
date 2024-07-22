@@ -60,7 +60,7 @@
     else if(s < 300) {n->stat_2xx_counter++;}                                  \
     else if(s < 400) {n->stat_3xx_counter++;}                                  \
     else if(s < 500) {n->stat_4xx_counter++;}                                  \
-    else {n->stat_5xx_counter++;}                                              \
+    else if(s < 600) {n->stat_5xx_counter++;}                                  \
 }
 
 #if (NGX_HTTP_CACHE)
